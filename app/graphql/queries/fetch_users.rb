@@ -4,7 +4,7 @@ module Queries
     type [Types::RandomUserType ], null: false
 
     def resolve(**args)
-      RandomUser.all.order(uuid)
+      RandomUser.all
     end
 
   end
