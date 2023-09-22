@@ -1,0 +1,2 @@
+class Ruid < ApplicationRecord
+end
