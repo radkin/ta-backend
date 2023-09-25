@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_22_225721) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_25_021459) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -37,7 +37,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_22_225721) do
     t.bigint "timezone_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "street_id", null: false
     t.index ["coordinates_id"], name: "index_locations_on_coordinates_id"
+    t.index ["street_id"], name: "index_locations_on_street_id"
     t.index ["timezone_id"], name: "index_locations_on_timezone_id"
   end
 
@@ -122,6 +124,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_22_225721) do
   end
 
   add_foreign_key "locations", "coordinates", column: "coordinates_id"
+  add_foreign_key "locations", "streets"
   add_foreign_key "locations", "timezones"
   add_foreign_key "random_users", "dobs"
   add_foreign_key "random_users", "locations"

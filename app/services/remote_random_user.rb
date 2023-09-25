@@ -17,7 +17,7 @@ class RemoteRandomUser
   end
 
   def update_local
-    newRandomUser = RandomUser.new(remote_user)
+    newRandomUser = RandomUser.new(@remote_user)
     newRandomUser.save!
   end
 
