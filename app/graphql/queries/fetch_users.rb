@@ -2,7 +2,6 @@ module Queries
   class FetchUsers < Queries::BaseQuery
 
     require_relative '../../services/remote_random_user'
-    require_relative '../../../lib/random_user_me'
 
     require 'json'
 
@@ -95,14 +94,7 @@ module Queries
         nat: random_user_data["nat"]
       )
 
-
-
-      # mapped_random_user.inspect
-
-
-      # rru.remote_user = name
-      #
-      # rru.update_local
+      randomUser.save!
 
       RandomUser.all
     end
