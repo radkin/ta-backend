@@ -75,3 +75,5 @@ gem "graphql", "~> 2.1"
 gem "graphiql-rails", group: :development
 
 gem "rest-client", "~> 2.1"
+
+gem "rack-cors", "~> 2.0"

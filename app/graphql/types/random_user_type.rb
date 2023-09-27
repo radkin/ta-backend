@@ -12,7 +12,7 @@ module Types
     field :registered, RegisteredType, null:false
     field :phone, String, null:false
     field :cell, String, null:false
-    field :id, IdType, null:false
+
     field :picture, PictureType, null:false
     field :nat, String, null:false
 
